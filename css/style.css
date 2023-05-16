@@ -88,6 +88,21 @@ a {
   color: darkblue;
 }
 
+@keyframes blink {
+  0% {
+    background-color: rgba(28, 21, 21, 0.802);
+    box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.75);
+  }
+  50% {
+    background-color: rgba(193, 13, 13, 0.743);
+    box-shadow: 0px 0px 3px 5px rgba(114, 9, 9, 0.75);
+  }
+  100% {
+    background-color: rgba(28, 21, 21, 0.802);
+    box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.75);
+  }
+}
+
 .main__logo {
   width: 70px;
   height: 70px;
@@ -96,15 +111,18 @@ a {
   background-size: cover;
   border: 1px solid rgba(30, 11, 11, 0.715);
   border-radius: 8px;
-  box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.75);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.75); */
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  animation-name: blink;
+  animation-duration: 200ms;
+  animation-iteration-count: infinite;
 }
 
-.main__logo:hover {
+/* .main__logo:hover {
   background-color: rgba(139, 0, 0, 0.422);
   box-shadow: 0px 0px 3px 5px rgba(114, 9, 9, 0.75);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .main__container {
   position: relative;
@@ -112,7 +130,7 @@ a {
 }
 
 .teka__photo {
-  position: absolute;
+  position: relative;
   top: 150vw;
   display: flex;
   flex-wrap: wrap;
@@ -130,6 +148,51 @@ a {
 
 .teka__photo_img {
   width: calc((100% - 10px) / 2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zoomed {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(3);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teka__photo_img:hover {
+  cursor: nesw-resize;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  padding: auto 25px;
+  background-color: rgba(212, 176, 155, 0.5);
+  box-shadow: 0px 1px 15px 0px rgba(192, 51, 51, 0.75);
+}
+
+.footer_text {
+  color: rgb(121, 17, 17);
+  font-size: 20px;
+}
+
+.footer_logo_l {
+  width: 70px;
+  height: 70px;
+  background-image: url(../images/skull_pirates_with_sword_illustration-removebg-preview.png);
+  background-size: cover;
+}
+
+.footer_logo_r {
+  width: 115px;
+  height: 68px;
+  background-image: url(../images/kraken_razderi.jpeg);
+  background-size: contain;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -152,5 +215,9 @@ a {
 
   .teka__photo_img {
     width: calc((100% - 30px * 2) / 3);
+  }
+
+  .footer_text {
+    font-size: 30px;
   }
 }

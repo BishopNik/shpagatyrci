@@ -23,7 +23,11 @@
     <header class="container">
       <div class="header__container">
         <a href="./index.html" class="main__logo_t">Шпага<span class="main__logo_s">тырцы</span> </a>
-        <button type="button" class="main__logo"></button>
+        <a href="./waryat.html">Пали изо всех пушек!</a>
+        <a href="./alco.html">Мутить шторм в трюме</a>
+        <a href="./portret.html">Искатели сокровищ</a>
+        <a href="">Промочить горло</a>
+        <button onclick="playAudio()" class="main__logo"></button>
       </div>
     </header>
     <main class="main__container container">
@@ -55,14 +59,27 @@
         <li class="teka__photo_img">
           <img src="./images/photos_team/IMG_9.jpg" alt="Yacht" />
         </li>
+        <li class="teka__photo_img">
+          <img src="./images/photos_team/IMG_10.jpg" alt="Yacht" />
+        </li>
       </ul>
-      <audio autoplay loop><source src="music/magadan_out.mp3"" type="audio/mpeg" /></audio>
+      <!-- <audio autoplay loop>
+        <source src="./music/magadan_out.mp3" type="audio/mpeg" />
+      </audio> -->
+      <audio id="fonMusic" src="./music/magadan_out.mp3"></audio>
       <!-- <audio id="myAudio">
         <source src="./music/magadan_out.mp3" type="audio/mpeg" />
       </audio> -->
     </main>
-    <footer></footer>
+    <footer class="container">
+      <ul class="footer__container">
+        <li class="footer_logo_l"></li>
+        <li><h2 class="footer_text">Свистать всех наверх! Тишина на палубе!</h2></li>
+        <li class="footer_logo_r"></li>
+      </ul>
+    </footer>
     <script src="./js/button.js"></script>
     <script src="./js/music.js"></script>
+    <script src="./js/zoom.js"></script>
   </body>
 </html>
