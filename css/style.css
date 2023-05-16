@@ -59,7 +59,7 @@ a {
 
 .container {
   max-width: 100vw;
-  padding: 15px 60px;
+  padding: 10px 20px;
   margin: 0 auto;
 }
 
@@ -107,29 +107,50 @@ a {
 }
 
 .main__container {
+  position: relative;
   margin-top: 105px;
 }
 
 .teka__photo {
+  position: absolute;
+  top: 150vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 30px;
-  row-gap: 40px;
+  column-gap: 10px;
+  row-gap: 15px;
+  animation: slide-up 3000ms forwards;
+}
+
+@keyframes slide-up {
+  to {
+    top: 0;
+  }
 }
 
 .teka__photo_img {
-  width: calc((100% - 30px * 2) / 3);
+  width: calc((100% - 10px) / 2);
 }
 
 @media screen and (min-width: 768px) {
   .container {
     min-width: 768px;
     max-width: var(--width);
+    padding: 15px 60px;
   }
 
   .header__container {
     width: var(--width_header);
     left: calc((100vw - var(--width_header)) / 2);
+  }
+
+  .teka__photo {
+    top: 100vw;
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  .teka__photo_img {
+    width: calc((100% - 30px * 2) / 3);
   }
 }
