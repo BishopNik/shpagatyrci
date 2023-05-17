@@ -143,13 +143,21 @@ a {
   animation: gradientAnimation 1500ms linear infinite;
 }
 
-/* .main__logo_s {
-  color: darkblue;
+.main__logo_s {
+  display: none;
+  /* color: darkblue;
   color: transparent;
   background-image: linear-gradient(to right, #ff00004d, #04044940);
   background-clip: text;
-  -webkit-background-clip: text;
-} */
+  -webkit-background-clip: text; */
+}
+
+.main__logo_m {
+  width: 115px;
+  height: 70px;
+  background-image: url(../images//icon/kraken_razderi.png);
+  background-size: cover;
+}
 
 .header__sabut {
   width: 88px;
@@ -176,12 +184,14 @@ a {
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 998;
+  pointer-events: none;
 }
 
 .header__menu .header__menu_item::after {
   width: 200%;
   top: 23px;
   left: 90%;
+  pointer-events: none;
 }
 
 .header__menu_item:hover:after {
@@ -254,6 +264,7 @@ a {
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 998;
+  pointer-events: none;
 }
 
 .main__logo:hover:after {
@@ -289,8 +300,9 @@ a {
 }
 
 .teka__photo_img {
-  width: calc((100% - 10px) / 2);
+  width: calc(100% - 10px);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: scroll;
 }
 
 .zoomed {
@@ -313,38 +325,73 @@ a {
   align-items: center;
   position: relative;
   height: 80px;
-  padding: auto 25px;
+  /* padding: auto 25px; */
   background-color: rgba(212, 176, 155, 0.5);
   background-image: linear-gradient(to right, #ff00004d, #04044940);
   box-shadow: 0px 1px 15px 0px rgba(192, 51, 51, 0.75);
 }
 
 .footer_text {
+  width: 130px;
   padding: 0 15px;
   text-align: center;
   color: rgb(121, 17, 17);
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .footer_logo_l {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-image: url(../images//icon/skull_pirates_with_sword_illustration-removebg-preview.png);
   background-size: cover;
 }
 
 .footer_logo_r {
-  width: 115px;
-  height: 68px;
-  background-image: url(../images//icon/kraken_razderi.jpeg);
-  background-size: contain;
+  width: 105px;
+  height: 70px;
+  background-image: url(../images//icon/flag.png);
+  background-size: cover;
   border-radius: 10px;
 }
 
+@media screen and (min-width: 428px) {
+  .footer_text {
+    width: 280px;
+    font-size: 18px;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .main__logo_s {
+    display: block;
+  }
+
+  .main__logo_m {
+    display: none;
+  }
+
+  .teka__photo {
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+
+  .teka__photo_img {
+    width: calc((100% - 15px) / 2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-x: scroll;
+  }
+
+  .footer_text {
+    width: auto;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
   .container {
     min-width: 768px;
     max-width: var(--width);
+    margin-top: 60px;
     padding: 15px 82px;
   }
 
