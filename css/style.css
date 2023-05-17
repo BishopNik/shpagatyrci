@@ -15,7 +15,7 @@ body {
   letter-spacing: 0.02em;
   background-position: top center;
   background-image: linear-gradient(to bottom, rgba(203, 186, 186, 0.75), rgba(162, 161, 149, 0.75)),
-    url("../images/bg-img.jpg");
+    url("../images/bg-img/bg-img.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -68,24 +68,145 @@ a {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 997;
   width: 100vw;
   height: 90px;
   left: 0;
   top: 0;
   padding: 0 25px;
   background-color: rgba(212, 176, 155, 0.5);
+  background-image: linear-gradient(to right, #ff00004d, #04044940);
   box-shadow: 0px 1px 15px 0px rgba(192, 51, 51, 0.75);
+  border-radius: 10px;
+}
+
+.header__container:hover {
+  background-image: linear-gradient(to right, #ff000061, #04044961);
+  border-radius: 10px 10px 0 0;
+}
+
+.header__menu {
+  position: absolute;
+  z-index: 996;
+  width: 100%;
+  height: 45px;
+  left: 0;
+  top: 100%;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(189, 160, 142, 0.7);
+  border-radius: 0 0 10px 10px;
+}
+
+.header__container:hover .header__menu {
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__menu_items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .main__logo_t {
   font-weight: bold;
   font-size: 36px;
   text-transform: uppercase;
-  color: darkred;
+  /* color: darkred; */
+  color: transparent;
+  background-color: black;
+  background-image: linear-gradient(
+    to right,
+    rgba(193, 157, 16, 1) 1%,
+    rgba(209, 65, 89, 1) 43%,
+    rgba(16, 33, 120, 1) 88%
+  );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  animation: gradientAnimation 1500ms linear infinite;
 }
 
-.main__logo_s {
+/* .main__logo_s {
   color: darkblue;
+  color: transparent;
+  background-image: linear-gradient(to right, #ff00004d, #04044940);
+  background-clip: text;
+  -webkit-background-clip: text;
+} */
+
+.header__sabut {
+  width: 88px;
+  height: 70px;
+  background-image: url(../images//icon/pirat_rum.png);
+  background-size: cover;
+}
+
+.header__menu_item {
+  position: relative;
+}
+
+.header__menu_item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 300%;
+  padding: 8px;
+  background-color: transparent;
+  color: #e6f278;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 998;
+}
+
+.header__menu .header__menu_item::after {
+  width: 200%;
+  top: 23px;
+  left: 90%;
+}
+
+.header__menu_item:hover:after {
+  opacity: 1;
+}
+
+.icon-1 {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-image: url(../images//icon/pirat_buh.png);
+}
+
+.icon-2 {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-image: url(../images//icon/pirats_buh.png);
+}
+
+.icon-3 {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-image: url(../images//icon/pirat_portret.png);
 }
 
 @keyframes blink {
@@ -104,18 +225,39 @@ a {
 }
 
 .main__logo {
+  position: relative;
   width: 70px;
   height: 70px;
   background-color: rgba(57, 54, 54, 0.473);
-  background-image: url(../images/crossing_bones_skull_vector_logo.png);
+  background-image: url(../images//icon/crossing_bones_skull_vector_logo.png);
   background-size: cover;
   border: 1px solid rgba(30, 11, 11, 0.715);
   border-radius: 8px;
   /* box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.75); */
   /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   animation-name: blink;
-  animation-duration: 200ms;
+  animation-duration: 400ms;
   animation-iteration-count: infinite;
+}
+
+.main__logo::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 25%;
+  right: 90%;
+  width: 300%;
+  padding: 8px;
+  background-color: transparent;
+  color: #f2ea78;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 998;
+}
+
+.main__logo:hover:after {
+  opacity: 1;
 }
 
 /* .main__logo:hover {
@@ -126,7 +268,7 @@ a {
 
 .main__container {
   position: relative;
-  margin-top: 105px;
+  margin-top: 115px;
 }
 
 .teka__photo {
@@ -156,6 +298,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 998;
   transform: scale(3);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -172,25 +315,28 @@ a {
   height: 80px;
   padding: auto 25px;
   background-color: rgba(212, 176, 155, 0.5);
+  background-image: linear-gradient(to right, #ff00004d, #04044940);
   box-shadow: 0px 1px 15px 0px rgba(192, 51, 51, 0.75);
 }
 
 .footer_text {
+  padding: 0 15px;
+  text-align: center;
   color: rgb(121, 17, 17);
   font-size: 20px;
 }
 
 .footer_logo_l {
-  width: 70px;
-  height: 70px;
-  background-image: url(../images/skull_pirates_with_sword_illustration-removebg-preview.png);
+  width: 100px;
+  height: 100px;
+  background-image: url(../images//icon/skull_pirates_with_sword_illustration-removebg-preview.png);
   background-size: cover;
 }
 
 .footer_logo_r {
   width: 115px;
   height: 68px;
-  background-image: url(../images/kraken_razderi.jpeg);
+  background-image: url(../images//icon/kraken_razderi.jpeg);
   background-size: contain;
   border-radius: 10px;
 }
@@ -199,7 +345,7 @@ a {
   .container {
     min-width: 768px;
     max-width: var(--width);
-    padding: 15px 60px;
+    padding: 15px 82px;
   }
 
   .header__container {

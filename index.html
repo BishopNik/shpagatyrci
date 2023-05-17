@@ -21,14 +21,45 @@
   </head>
   <body>
     <header class="container">
-      <div class="header__container">
-        <a href="./index.html" class="main__logo_t">Шпага<span class="main__logo_s">тырцы</span> </a>
-        <a href="./waryat.html">Пали изо всех пушек!</a>
-        <a href="./alco.html">Мутить шторм в трюме</a>
-        <a href="./portret.html">Искатели сокровищ</a>
-        <a href="">Промочить горло</a>
-        <button onclick="playAudio()" class="main__logo"></button>
-      </div>
+      <ul class="header__container">
+        <li>
+          <a href="./index.html" class="main__logo_t">Шпага<span class="main__logo_s">тырцы</span> </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="header__menu_item"
+            data-tooltip="Хочешь промочить горло? Чтоб проклятый осьминог выпил весь ром в твоих кишках!">
+            <div class="header__sabut"></div
+          ></a>
+        </li>
+        <li><button onclick="playAudio()" class="main__logo" data-tooltip="Заводи шарманку!"></button></li>
+        <li class="header__menu">
+          <ul class="header__menu_items">
+            <li>
+              <a
+                href="./waryat.html"
+                class="header__menu_item icon-1"
+                data-tooltip="Пали изо всех пушек! Зелень подкильная!">
+                <div class="header__menu_icon"></div>
+              </a>
+            </li>
+            <li>
+              <a href="./alco.html" class="header__menu_item icon-2" data-tooltip="Шторм в трюме! Червь Гальюнный!">
+                <div class="header__menu_icon"></div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./portret.html"
+                class="header__menu_item icon-3"
+                data-tooltip="Искатели сокровищ! Недоумок палубный!">
+                <div class="header__menu_icon"></div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </header>
     <main class="main__container container">
       <ul class="teka__photo">

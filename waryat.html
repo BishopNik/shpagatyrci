@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shpagatyrci</title>
+    <meta name="description" content="Shpagatyrci" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <ul class="header__container">
+        <li>
+          <a href="./index.html" class="main__logo_t">Шпага<span class="main__logo_s">тырцы</span> </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="header__menu_item"
+            data-tooltip="Хочешь промочить горло? Чтоб проклятый осьминог выпил весь ром в твоих кишках!">
+            <div class="header__sabut"></div
+          ></a>
+        </li>
+        <li><button onclick="playAudio()" class="main__logo" data-tooltip="Заводи шарманку!"></button></li>
+        <li class="header__menu">
+          <ul class="header__menu_items">
+            <li>
+              <a
+                href="./waryat.html"
+                class="header__menu_item icon-1"
+                data-tooltip="Пали изо всех пушек! Зелень подкильная!">
+                <div class="header__menu_icon"></div>
+              </a>
+            </li>
+            <li>
+              <a href="./alco.html" class="header__menu_item icon-2" data-tooltip="Шторм в трюме! Червь Гальюнный!">
+                <div class="header__menu_icon"></div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./portret.html"
+                class="header__menu_item icon-3"
+                data-tooltip="Искатели сокровищ! Недоумок палубный!">
+                <div class="header__menu_icon"></div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main class="main__container container">
+      <ul class="teka__photo">
+        <li class="teka__photo_img">
+          <img src="./images/photos_crazy/IMG_1.jpg" alt="Yacht" />
+        </li>
+        <li class="teka__photo_img">
+          <img src="./images/photos_crazy/IMG_2.jpg" alt="Yacht" />
+        </li>
+        <li class="teka__photo_img">
+          <img src="./images/photos_crazy/IMG_3.jpg" alt="Yacht" />
+        </li>
+        <li class="teka__photo_img">
+          <img src="./images/photos_crazy/IMG_4.jpg" alt="Yacht" />
+        </li>
+        <li class="teka__photo_img">
+          <img src="./images/photos_crazy/IMG_5.jpg" alt="Yacht" />
+        </li>
+      </ul>
+      <!-- <audio autoplay loop>
+        <source src="./music/magadan_out.mp3" type="audio/mpeg" />
+      </audio> -->
+      <audio id="fonMusic" src="./music/magadan_out.mp3"></audio>
+      <!-- <audio id="myAudio">
+        <source src="./music/magadan_out.mp3" type="audio/mpeg" />
+      </audio> -->
+    </main>
+    <footer class="container">
+      <ul class="footer__container">
+        <li class="footer_logo_l"></li>
+        <li><h2 class="footer_text">Свистать всех наверх! Тишина на палубе!</h2></li>
+        <li class="footer_logo_r"></li>
+      </ul>
+    </footer>
+    <script src="./js/button.js"></script>
+    <script src="./js/music.js"></script>
+    <script src="./js/zoom.js"></script>
+  </body>
+</html>
