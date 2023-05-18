@@ -306,10 +306,6 @@ a {
   overflow-x: scroll;
 }
 
-.teka__photo_img:nth-child(n) {
-  transform-origin: top left;
-}
-
 .zoomed {
   position: relative;
   z-index: 998;
