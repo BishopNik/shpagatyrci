@@ -358,7 +358,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1099px) {
+@media screen and (min-width: 768px) {
   .main__logo_s {
     display: block;
   }
@@ -378,12 +378,14 @@ a {
     overflow-x: scroll;
   }
 
-  .teka__photo_img:nth-child(2n + 1) {
-    transform-origin: top left;
-  }
+  @media screen and (max-width: 1099px) {
+    .teka__photo_img:nth-child(2n + 1) {
+      transform-origin: top left;
+    }
 
-  .teka__photo_img:nth-child(2n) {
-    transform-origin: top right;
+    .teka__photo_img:nth-child(2n) {
+      transform-origin: top right;
+    }
   }
 
   .footer_text {
