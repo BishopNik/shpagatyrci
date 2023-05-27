@@ -137,8 +137,8 @@ a {
     rgba(209, 65, 89, 1) 43%,
     rgba(16, 33, 120, 1) 88%
   );
-  background-clip: border-box;
   -webkit-background-clip: text;
+  background-clip: border-box;
   background-size: 200% 100%;
   animation: gradientAnimation 1500ms linear infinite;
 }
