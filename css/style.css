@@ -128,7 +128,6 @@ a {
   font-weight: bold;
   font-size: 36px;
   text-transform: uppercase;
-  /* color: darkred; */
   color: transparent;
   background-color: black;
   background-image: linear-gradient(
@@ -138,7 +137,6 @@ a {
     rgba(16, 33, 120, 1) 88%
   );
   -webkit-background-clip: text;
-  background-clip: border-box;
   background-size: 200% 100%;
   animation: gradientAnimation 1500ms linear infinite;
 }
