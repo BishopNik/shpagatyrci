@@ -160,6 +160,7 @@ a {
 .header__sabut {
   width: 88px;
   height: 70px;
+  background-color: transparent;
   background-image: url(../images//icon/pirat_rum.png);
   background-size: cover;
 }
@@ -349,6 +350,79 @@ a {
   border-radius: 10px;
 }
 
+.modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  padding: 45px 20px 20px;
+}
+
+.modal.is-hidden {
+  visibility: visible;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal.is-hidden .window {
+  transform: scale(0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.window {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  padding: 50px 20px;
+  margin: 55px auto;
+  border-radius: 4px;
+  background-color: antiquewhite;
+  z-index: 1099;
+}
+
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 23px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background: antiquewhite;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: blue;
+}
+
+.modal-close:hover .icon-modal,
+.modal-close:hover .icon-modal {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: white;
+}
+
+.modal_window_text {
+  padding: 15px 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
 @media screen and (min-width: 428px) {
   .footer_text {
     width: 228px;
@@ -390,6 +464,38 @@ a {
     width: auto;
     font-size: 20px;
   }
+
+  .modal {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(46, 47, 66, 0.4);
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: scroll;
+    padding: 40px 20px;
+  }
+
+  .window {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    padding: 30px 20px;
+    margin: 55px auto;
+    border-radius: 4px;
+    background-color: antiquewhite;
+    z-index: 1099;
+  }
+
+  .modal_window_text {
+    padding: 45px 15px;
+    font-size: 36px;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -425,5 +531,13 @@ a {
 
   .footer_text {
     font-size: 30px;
+  }
+
+  .modal {
+    padding: 90px 20px 20px;
+  }
+
+  .window {
+    width: 50%;
   }
 }

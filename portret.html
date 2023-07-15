@@ -38,23 +38,35 @@
           <a
             href="#"
             class="header__menu_item"
-            data-tooltip="Хочешь промочить горло? Чтоб проклятый осьминог выпил весь ром в твоих кишках!">
-            <div class="header__sabut"></div
+            data-tooltip="Хочешь промочить горло? Чтоб проклятый осьминог выпил весь ром в твоих кишках!"
+            aria-label="Выбор собутыльника">
+            <button name="Find Sabutilnik" type="submit" class="header__sabut"></button
           ></a>
         </li>
-        <li><button onclick="playAudio()" class="main__logo" data-tooltip="Заводи шарманку!"></button></li>
+        <li>
+          <button
+            onclick="playAudio()"
+            class="main__logo"
+            data-tooltip="Заводи шарманку!"
+            aria-label="Музыка на палубу"></button>
+        </li>
         <li class="header__menu">
           <ul class="header__menu_items">
             <li>
               <a
                 href="./waryat.html"
                 class="header__menu_item icon-1"
-                data-tooltip="Пали изо всех пушек! Зелень подкильная!">
+                data-tooltip="Пали изо всех пушек! Зелень подкильная!"
+                aria-label="Варьяты">
                 <div class="header__menu_icon"></div>
               </a>
             </li>
             <li>
-              <a href="./alco.html" class="header__menu_item icon-2" data-tooltip="Шторм в трюме! Червь Гальюнный!">
+              <a
+                href="./alco.html"
+                class="header__menu_item icon-2"
+                data-tooltip="Шторм в трюме! Червь Гальюнный!"
+                aria-label="Алкаши">
                 <div class="header__menu_icon"></div>
               </a>
             </li>
@@ -62,13 +74,24 @@
               <a
                 href="./portret.html"
                 class="header__menu_item icon-3"
-                data-tooltip="Искатели сокровищ! Недоумок палубный!">
+                data-tooltip="Искатели сокровищ! Недоумок палубный!"
+                aria-label="Пираты">
                 <div class="header__menu_icon"></div>
               </a>
             </li>
           </ul>
         </li>
       </ul>
+      <div class="modal is-hidden" data-modal>
+        <div class="window">
+          <button class="modal-close" type="button" data-modal-close aria-label="Close">
+            <svg class="icon-modal" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal_window_text">Что, Пират, трюм хочешь залить???</p>
+        </div>
+      </div>
     </header>
     <main class="main__container container">
       <ul class="teka__photo" data-count="7" data-type="photos_portret" data-tema="Portret Pirate"></ul>

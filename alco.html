@@ -40,7 +40,7 @@
             class="header__menu_item"
             data-tooltip="Хочешь промочить горло? Чтоб проклятый осьминог выпил весь ром в твоих кишках!"
             aria-label="Выбор собутыльника">
-            <div class="header__sabut"></div
+            <button name="Find Sabutilnik" type="submit" class="header__sabut"></button
           ></a>
         </li>
         <li>
@@ -82,6 +82,16 @@
           </ul>
         </li>
       </ul>
+      <div class="modal is-hidden" data-modal>
+        <div class="window">
+          <button class="modal-close" type="button" data-modal-close aria-label="Close">
+            <svg class="icon-modal" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal_window_text">Что, Пират, трюм хочешь залить???</p>
+        </div>
+      </div>
     </header>
     <main class="main__container container">
       <ul class="teka__photo" data-count="7" data-type="photos_alco" data-tema="Alcoparty crew pirate"></ul>
