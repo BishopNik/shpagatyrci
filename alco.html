@@ -18,6 +18,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.css"
+      integrity="sha512-F9LmkLMLlhGg4sZO3XOEaFCBPstirJxc9PNM2pUjKm3DY4nh2AiJV319fy7rhOo1HoLOUsX6UlwcevjQg2tPWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="container">
@@ -78,36 +84,14 @@
       </ul>
     </header>
     <main class="main__container container">
-      <ul class="teka__photo">
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_1.jpg" alt="Yacht" />
-        </li>
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_2.jpg" alt="Yacht" />
-        </li>
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_3.jpg" alt="Yacht" />
-        </li>
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_7.jpg" alt="Yacht" />
-        </li>
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_5.jpg" alt="Yacht" />
-        </li>
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_6.jpg" alt="Yacht" />
-        </li>
-        <li class="teka__photo_img">
-          <img src="./images/photos_alco/IMG_4.jpg" alt="Yacht" />
-        </li>
-      </ul>
+      <ul class="teka__photo" data-count="7" data-type="photos_alco" data-tema="Alcoparty crew pirate"></ul>
       <!-- <audio autoplay loop>
         <source src="./music/magadan_out.mp3" type="audio/mpeg" />
       </audio> -->
       <audio id="fonMusic" src="./music/magadan_out.mp3"></audio>
-      <!-- <audio id="myAudio">
+      <audio id="myAudio">
         <source src="./music/magadan_out.mp3" type="audio/mpeg" />
-      </audio> -->
+      </audio>
     </main>
     <footer class="container">
       <ul class="footer__container">
@@ -116,8 +100,13 @@
         <li class="footer_logo_r"></li>
       </ul>
     </footer>
-    <script src="./js/button.js"></script>
     <script src="./js/music.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"
+      integrity="sha512-X1tKd7cMiYWKVDmFHSn+z1Y+BdrNG6Qvrhj3emg0ZOMsAuzug4ET9PmOFBgYyvcjI1hHGxhkQ1IXhOd9obYeFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script> -->
     <script src="./js/zoom.js"></script>
   </body>
 </html>

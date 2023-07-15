@@ -1,9 +1,13 @@
- window.onload = function() {
-  var audio = document.getElementById("myAudio");
-  audio.play();
- }
+//  window.onload = function() {
+//   const audio = document.getElementById("myAudio");
+//   audio.play();
+//  }
 
  function playAudio() {
-    var audio = document.getElementById("fonMusic");
+    const audio = document.getElementById("fonMusic");
+    if (!audio.paused) {
+        audio.pause();
+        return
+    }
     audio.play();
-  }
+ }
