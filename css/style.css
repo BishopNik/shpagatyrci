@@ -308,7 +308,6 @@ a {
 .teka__photo_img {
   display: inline-block;
   width: calc(100% - 10px);
-  max-height: 250px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: scroll;
 }
